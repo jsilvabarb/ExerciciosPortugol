@@ -1,0 +1,31 @@
+/*
+Número primo?
+*/
+inicio
+   
+    inteiro: numero, cont;
+    logico: ePrimo;
+    
+    cont <- 2;
+    ePrimo <- verdadeiro;
+    
+    leia(numero);
+    
+    //verificando se o número é ou não primo 
+    enquanto cont < numero e ePrimo faca
+        se (numero mod cont) = 0  entao
+            ePrimo <- falso;
+        fimse;
+        cont <- cont + 1;
+    fimenquanto;
+    
+    se numero = 1 entao  
+        ePrimo <- falso;
+    fimse;
+    
+    se ePrimo entao 
+        escreva("sim");
+    senao
+       escreva("nao");
+    fimse;
+fim.

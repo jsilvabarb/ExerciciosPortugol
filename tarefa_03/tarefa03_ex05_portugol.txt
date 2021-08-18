@@ -1,0 +1,32 @@
+/*
+Imprimir o numero do termo de acordo com a posicao
+da sequência Fibonacci;
+*/
+inicio
+    inteiro: posicao, anterior, atual, proximo, cont;
+    
+    leia(posicao);
+    
+    cont<- 3;
+    atual<- 1;
+    anterior <- 1;
+  
+    escolha posicao
+        caso 0 : escreva(0);
+        caso 1: escreva(1);
+        caso 2: escreva(1);
+        caso contrario:
+            inicio
+                enquanto cont <= posicao faca
+                //escreva(anterior);
+                proximo <- atual + anterior;
+                anterior <- atual;
+                atual <- proximo;
+                
+                cont <- cont + 1;
+            fimenquanto;
+            escreva(proximo);
+        fim;
+    fimescolha;
+   
+fim.

@@ -1,0 +1,72 @@
+/*
+     Desafio 02 tarefa 03
+*/
+inicio
+    
+    inteiro: canal, nPessoas, globo, sbt, record, bandei, cultura;
+    inteiro: qtdPessoas;
+    real: pctGlobo, pctSbt, pctRecord, pctBand, pctCultura;
+    repita
+        leia(canal, nPessoas);
+        se nPessoas > 0 e canal > 0 entao
+            inicio
+                escolha canal
+                    caso 17:
+                        inicio
+                            globo <- globo + nPessoas;
+                        fim;
+                    caso 18:
+                        inicio
+                            sbt <- sbt + nPessoas;
+                        fim;
+                    caso 19:
+                        inicio
+                            record <- record + nPessoas;
+                        fim;
+                    caso 20:
+                        inicio
+                            bandei <- bandei + nPessoas;
+                        fim;
+                    caso 22:
+                        inicio
+                            cultura <- cultura + nPessoas;
+                        fim;
+                    caso contrario: nPessoas <- 0;
+                fimescolha;
+                //qtdPessoas <- qtdPessoas + nPessoas;
+            fim;
+        fimse;
+    ate canal = 0;
+    
+    //Calculando os percentuais de audiencia de cada canal
+    qtdPessoas <- globo + sbt + record + bandei + cultura;
+    pctGlobo <- globo * 100.0 / qtdPessoas;
+    pctSbt <- sbt * 100.0 / qtdPessoas;
+    pctRecord <- record * 100.0 / qtdPessoas;
+    pctBand <- bandei * 100.0 / qtdPessoas;
+    pctCultura <- cultura * 100.0 / qtdPessoas;
+    
+    //Verificando se o canal possui audiencia para imprimir
+    //O resultado
+    
+    se pctGlobo > 0 entao 
+        escreva("17 ", pctGlobo);
+    fimse;
+    
+    se pctSbt > 0 entao 
+        escreva("18 ",pctSbt);
+    fimse;
+    
+    se pctRecord > 0 entao 
+        escreva("19 ",pctRecord);
+    fimse;
+    
+    se pctBand > 0 entao 
+        escreva("20 ",pctBand);
+    fimse;
+    
+    se pctCultura > 0 entao 
+        escreva("22 ",pctCultura);
+    fimse;
+   
+fim.

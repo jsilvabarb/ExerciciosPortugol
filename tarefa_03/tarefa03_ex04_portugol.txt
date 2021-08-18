@@ -1,0 +1,25 @@
+/*
+Código que define se um determinado número é ou não perfeito.
+*/
+inicio
+    inteiro: numero, cont, soma;
+    
+    leia(numero);
+    
+    cont <- 1;
+    
+    enquanto cont < numero faca
+        se numero mod cont = 0 entao
+            soma <- soma + cont;
+        fimse;
+        
+        cont <- cont + 1;
+    fimenquanto;
+    
+    se soma = numero entao
+        escreva("sim");
+    senao
+        escreva("nao");
+    fimse;
+   
+fim.

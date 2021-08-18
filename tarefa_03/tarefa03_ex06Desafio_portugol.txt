@@ -1,0 +1,89 @@
+/*
+     Desafio 01 tarefa 03
+*/
+inicio
+    
+    inteiro: nJogos, cont, golsF, golsT, fimLista;
+    inteiro: partidas, vitorias, empates, derrotas, saldoGols;
+    inteiro: somaGf, somaGt, maiorV, maiorD;
+    real: pctPartidas, pctVitorias, pctEmpates, pctDerrotas;
+    
+    leia(nJogos);
+    maiorV <- 0;
+    maiorD <- 0;
+    
+    cont <- nJogos;
+    enquanto golsF > -1 faca
+        leia(golsF, golsT);
+        se golsF > -1 entao
+            inicio
+                partidas <- partidas + 1;
+                
+                //Qtd Vitorias
+                se golsF > golsT entao
+                    inicio
+                        vitorias <- vitorias + 1;
+                    
+                        se golsF > maiorV entao 
+                            maiorV <- golsF;
+                        fimse;
+                    fim;
+                fimse;
+                
+                //Qtd Empates
+                se golsF = golsT entao
+                    empates <- empates + 1;
+                fimse;
+                
+                //Qtd Derrotas
+                se golsT > golsF entao
+                    inicio
+                        derrotas <- derrotas + 1;
+                        
+                        se golsT > maiorD entao 
+                            maiorD <- golsT;
+                        fimse;
+                    fim;
+                fimse;
+                
+                //Somando gols feitos e tomados
+                somaGf <- somaGf + golsF;
+                somaGt <- somaGt + golsT;
+            fim;
+        fimse;
+    fimenquanto;
+    
+    //Fazer -> Porcentagem de partidas analisadas
+    pctPartidas <- partidas * 100.0 / nJogos;
+    
+    //Fazer -> Porcentagem de vitórias analisadas
+    pctVitorias <- vitorias * 100.0 / partidas;
+    
+    //Fazer -> Porcentagem de vitórias analisadas
+    pctEmpates <- empates * 100.0 / partidas;
+    
+    //Fazer -> Porcentagem de derrotas analisadas
+    pctDerrotas <- derrotas * 100.0 / partidas;
+    
+    //Fazer -> Saldo de Gols
+    saldoGols <- somaGf - somaGt; 
+    
+    escreva(pctPartidas);
+    escreva(pctVitorias);
+    escreva(pctEmpates);
+    escreva(pctDerrotas);
+    escreva(saldoGols);
+    
+    se pctDerrotas > 0 entao
+        escreva(maiorD); //Maior nmr de gols tomados
+    senao
+        escreva("Nao houve derrotas.");
+    fimse;
+    
+    se pctVitorias > 0 entao
+        escreva(maiorV); //Maior nmr de gols feitos
+    senao
+         escreva("Nao houve vitorias.");
+    fimse;
+   
+fim.

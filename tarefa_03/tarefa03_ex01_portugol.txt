@@ -1,0 +1,33 @@
+/*
+Código que define se um determinado número é ou não perfeito.
+*/
+inicio
+    inteiro: n1, n2, cont, multplicacao,resultado;
+    
+    leia(n1, n2);
+    
+    multplicacao <- n1 * n2;
+    
+    cont<- 0;
+    
+    se multplicacao < 0 entao
+        inicio
+            //Subtração no caso da multplicacao ser negativa
+            enquanto cont <> multplicacao faca
+                cont <- cont - 1;
+                resultado <- cont;
+            fimenquanto;
+            escreva(resultado);
+        fim;
+    senao
+        inicio
+            //Adição no caso da multplicacao ser positiva
+            enquanto cont <= multplicacao faca
+                resultado <- cont;
+                cont <- cont + 1;
+            fimenquanto;
+            escreva(resultado);
+        fim;
+    fimse; 
+   
+fim.

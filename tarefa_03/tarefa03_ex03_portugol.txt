@@ -1,0 +1,28 @@
+/*
+Número triangular?
+*/
+inicio
+    inteiro: numero, cont;
+    logico: eTriangular;
+   
+    leia(numero);
+   
+    cont <- 1;
+    
+    //Verificando se o número é multiplo de numeros consecutivos
+    enquanto cont*(cont+1)*(cont+2) <= numero faca
+        se cont*(cont+1)*(cont+2) = numero entao
+            eTriangular <- verdadeiro;
+        senao
+            eTriangular <- falso;
+        fimse;
+        
+        cont <- cont + 1;
+    fimenquanto;
+    
+    se eTriangular entao
+        escreva("sim");
+    senao
+        escreva("nao");
+    fimse;
+fim.
