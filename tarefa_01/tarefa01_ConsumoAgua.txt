@@ -1,0 +1,83 @@
+/*Tarefa 01 
+
+Calcular valor do consumo de água de acordo
+com os metros cúbicos consumidos
+
+*/
+
+inicio
+    inteiro: consumoAgua, contaAgua, taxaMcubico;   
+
+    leia(consumoAgua);   
+
+    //O cliente deve pagar a assinatura independente do consumo   
+
+    contaAgua <- 7;    
+
+    se consumoAgua >= 0 entao
+
+        inicio
+
+            se consumoAgua <= 10 entao
+
+                contaAgua <- 7;
+
+            senao
+
+                inicio
+
+                    se consumoAgua <= 30 entao 
+
+                    inicio
+
+                        taxaMcubico <- consumoAgua - 10;        //Caso de 11 a 30
+
+                        contaAgua <- contaAgua + taxaMcubico;
+
+                    fim;
+
+                    senao
+
+                        inicio
+
+                            se consumoAgua <= 100 entao
+
+                                inicio
+
+                                    taxaMcubico <- 20 + ((consumoAgua - 30) * 2);       //Caso de 31 a 100
+
+                                    contaAgua <- contaAgua + taxaMcubico;
+
+                                fim;
+
+                            senao
+
+                                inicio
+
+                                    taxaMcubico <- 20 + (70 * 2) + ((consumoAgua - 100) * 5);       //Caso de 101 em Diante
+
+                                    contaAgua <- contaAgua + taxaMcubico;
+
+                                fim;
+
+                            fimse;
+
+                        fim;
+
+                    fimse;
+
+                fim;
+
+            fimse;
+
+        fim;
+
+    senao
+
+        escreva("Invalido.");
+
+    fimse;    
+
+    escreva(contaAgua);
+
+fim.

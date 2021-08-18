@@ -1,0 +1,52 @@
+/*Escreva um programa que leia a quantidade de fitas que ela 
+possui e valor de aluguel que ela compra.
+-----------------------------------------------------------------------------------------
+Saída:
+Faturamento da locadora;
+Ganho com multas;
+Quantidade de fitas ao fim do ano.
+-----------------------------------------------------------------------------------------
+*/
+
+inicio
+    inteiro: qtdFitas, fitasMes, fitasAtraso, fitasPerda, reposicao, qtdFitasFimAno;
+    real: valorAluguel, faturamento, multa, ganhoMultas;
+    
+    leia(qtdFitas, valorAluguel);
+    
+    //Calculando faturamento da locadora
+    
+    fitasMes <- qtdFitas * 1/3;
+    
+    faturamento <- fitasMes * valorAluguel;
+    
+    /*teste 1
+    escreva(faturamento);*/
+    
+    //Calculando valor ganho com multas por mês
+    
+    fitasAtraso <- fitasMes * 1/10;
+    
+    multa <- valorAluguel * 10/100;
+    
+    ganhoMultas <- fitasAtraso * multa;
+    
+    /*teste 2
+    escreva(ganhoMultas);*/
+    
+    //Calculando qtd fitas final do ano
+    
+    fitasPerda <- qtdFitas * 2/100;
+    
+    reposicao <- fitasPerda * 1/10;
+    
+    qtdFitasFimAno <- (qtdFitas - fitasPerda) + reposicao;
+    
+    /*teste 3
+    escreva(qtdFitasFimAno);*/
+    
+    escreva(faturamento);
+    escreva(ganhoMultas);
+    escreva(qtdFitasFimAno);
+    
+fim.

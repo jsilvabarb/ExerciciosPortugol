@@ -1,0 +1,16 @@
+/*
+Escreva um programa que leia um número real e imprima
+a terça parte desse número
+*/
+
+inicio
+    real: numero, tercaParte;
+    
+    leia(numero);
+    
+    //Calculando a terça parte de numero
+    
+    tercaParte <- numero * 1.0/3.0;
+    
+    escreva(tercaParte);
+fim.

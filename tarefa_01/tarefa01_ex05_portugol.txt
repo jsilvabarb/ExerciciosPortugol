@@ -1,0 +1,18 @@
+/*
+Escreva um programa que leia o preço à prazo de um produto
+e devolva como saída o preço à vista com desconto de 9%
+*/
+
+inicio
+    real: precoPrazo, precoAvista, desconto;
+    
+    leia(precoPrazo);    
+    
+    //Calculando valor do desconto do produto
+    desconto <- precoPrazo * 9/100;
+    
+    //Calculando preço à vista
+    precoAvista <- precoPrazo - desconto;
+    
+    escreva(precoAvista);
+fim.

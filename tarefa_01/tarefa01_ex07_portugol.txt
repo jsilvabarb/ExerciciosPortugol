@@ -1,0 +1,14 @@
+/*
+Escreva um programa que leia a altura h e o raio r de uma lata
+de óleo e imprima o seu volume( V = 3.14 * h * r^2)
+*/
+inicio
+    real: h, r, volume;
+    leia(h, r);   
+
+    //Calculando valor do volume da lata
+    volume <- 3.14 * h * pot(r,2);  
+
+    escreva(volume);
+
+fim.

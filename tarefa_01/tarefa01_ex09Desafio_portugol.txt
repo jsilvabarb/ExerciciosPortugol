@@ -1,0 +1,67 @@
+/*Escreva um programa que leia um número inteiro com três dígitos
+que representa o número de uma conta corrente e imprima o seu 
+dígito verificador.
+-----------------------------------------------------------------------------------------
+Cáculo;
+- Somar o número da conta com seu inverso
+- Multiplicar cada dígito pela sua ordem posicional e somar os 
+resultados
+- O último digito desse resultado é o dígito verificador da conta
+-----------------------------------------------------------------------------------------
+*/
+
+inicio
+    inteiro: numero, centena, dezena, unidade, resto, inverso, soma, calcPosicao, digito;
+    
+    leia(numero);
+    
+    //Separando centena, dezena e unidade do número lido
+    
+    centena <- numero / 100;
+    resto <- numero mod 100;
+    
+    dezena <- resto/ 10;
+    unidade <- resto mod 10;
+    
+    /*teste 1
+    escreva(centena,"  ", dezena, "  ", unidade);*/
+    
+    //Definindo inverso do número lido
+    
+    inverso <- (unidade * 100) + (dezena * 10) + (centena * 1);
+    
+    /*teste 2
+    escreva(inverso);*/
+    
+    //Somando o número lido ao seu inverso
+    
+    soma <- numero + inverso;
+    
+    /*teste 3
+    escreva(soma);*/
+    
+    //Separando centena, dezena e unidade de soma;
+    
+    centena <- soma / 100;
+    resto <- soma mod 100;
+    
+    dezena <- resto / 10;
+    unidade <- resto mod 10;
+    
+    /*teste 4
+    escreva(centena,"  ", dezena, "  ", unidade);*/
+    
+    //Multiplicando cada dígito de soma pela sua ordem posicional
+    
+    calcPosicao <- (centena * 1) + ( dezena * 2) + ( unidade * 3);
+    
+    /*teste 5
+    escreva(calcPosicao);*/
+    
+    //Definindo o dígito verificador do número lido
+    
+    digito <- calcPosicao mod 10;
+    
+    escreva(digito);
+    
+fim.

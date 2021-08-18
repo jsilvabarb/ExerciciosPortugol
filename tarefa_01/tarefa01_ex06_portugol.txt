@@ -1,0 +1,22 @@
+/*
+Escreva um programa que leia o valor da hora aula, o nª de aulas 
+dadas no mês e o percentual de desconto do INSS e imprima 
+o valor do salário líquido do professor
+*/
+
+inicio
+    real: valorHora, salarioLiquido, salarioBruto, descontoINSS;
+    inteiro: nAulas, percentualDesc;
+    
+    leia(valorHora, nAulas, percentualDesc);
+    
+    //Calculando valor do salário bruto
+    salarioBruto <- valorHora * nAulas;
+    
+    //Calculando valor do salário líquido 
+    descontoINSS <- salarioBruto * percentualDesc/100;
+    
+    salarioLiquido <- salarioBruto - descontoINSS;
+    
+    escreva(salarioLiquido);
+fim.

@@ -1,0 +1,19 @@
+/*
+Escreva um programa que leia dois números inteiros e devolva
+como saída a soma do quociente e do resto da divisão do  1º
+(dividendo) pelo segundo(divisor)
+*/
+
+inicio
+    inteiro: dividendo, divisor,  resto, quociente, soma;
+    
+    leia(dividendo, divisor);
+    
+    //Obtendo os valores para a soma
+    quociente <- dividendo / divisor;
+    resto <- dividendo mod divisor;
+    
+    soma <- quociente + resto;
+    
+    escreva(soma);
+fim.
