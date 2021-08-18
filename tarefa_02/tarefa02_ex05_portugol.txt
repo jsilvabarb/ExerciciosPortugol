@@ -1,0 +1,42 @@
+/*
+Imprima uma mensagem de acordo com a sigla do estado inserida.
+*/
+inicio
+    caracter: sigla;
+    
+    leia(sigla);
+    
+    //seleção encadeada homogênea que também pode ser feita
+    //da forma se-senao-se
+    
+    escolha sigla
+        caso "AC" : escreva("acriano");
+        caso "AL" : escreva("alagoano"); 
+        caso "AP" : escreva("amapaense"); 
+        caso "AM" : escreva("amazonense"); 
+        caso "BA" : escreva("baiano"); 
+        caso "CE" : escreva("cearense"); 
+        caso "DF" : escreva("brasiliense"); 
+        caso "ES" : escreva("capixaba"); 
+        caso "GO" : escreva("goiano"); 
+        caso "MA" : escreva("maranhense"); 
+        caso "MT" : escreva("mato-grossense"); 
+        caso "MS" : escreva("sul-mato-grossense"); 
+        caso "MG" : escreva("mineiro"); 
+        caso "PA" : escreva("paraense"); 
+        caso "PB" : escreva("paraibano"); 
+        caso "PR" : escreva("paranaense"); 
+        caso "PE" : escreva("pernambucano"); 
+        caso "PI" : escreva("piauiense"); 
+        caso "RJ" : escreva("fluminense"); 
+        caso "RN" : escreva("potiguar"); 
+        caso "RS" : escreva("gaucho"); 
+        caso "RO" : escreva("rondoniano"); 
+        caso "RR" : escreva("roraimense"); 
+        caso "SC" : escreva("catarinense"); 
+        caso "SP" : escreva("paulista"); 
+        caso "SE" : escreva("sergipiano"); 
+        caso "TO" : escreva("tocantinense"); 
+        caso contrario: escreva("invalida");
+    fimescolha;
+fim.

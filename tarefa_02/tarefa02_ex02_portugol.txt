@@ -1,0 +1,22 @@
+/*
+  Escreva um programa que leia um número real e imprima a raiz quadrada
+  do número caso ele seja positivo e o quadrado do número
+  caso ele seja negativo.
+*/
+inicio
+    real: n, raiz, quadrado;
+    
+    leia(n);
+    
+    se n > 0 entao
+        inicio
+            raiz <- rad(n);
+            escreva(raiz);
+        fim;
+    senao
+        inicio
+            quadrado <- pot(n,2);
+            escreva(quadrado);
+        fim;
+    fimse;
+fim.

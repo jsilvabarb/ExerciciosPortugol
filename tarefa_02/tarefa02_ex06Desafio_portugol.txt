@@ -1,0 +1,21 @@
+/*
+Desafio 1 Tarefa02: Calculadora.
+*/
+inicio
+    inteiro: a, b;
+    caracter: sinal;
+    
+    leia(a, b, sinal);
+    
+    escolha sinal
+        caso "+": escreva(a + b);
+        caso "-": escreva(a - b);
+        caso "*": escreva(a * b);
+        caso "/": se b = 0 entao  //Validando a divisao
+                    escreva("Divisao por zero.");
+                    senao
+                        escreva((a / b),",", (a mod b)); //divisao,resto
+                  fimse;
+        caso contrario: escreva("Operacao invalida.");
+    fimescolha;
+fim.

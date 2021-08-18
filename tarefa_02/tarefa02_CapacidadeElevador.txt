@@ -1,0 +1,45 @@
+/*
+Tarefa 02 Determinar se a capacidade máxima do elevador foi excedida
+*/
+inicio
+    inteiro: qtdLeituras, capacidadeMax, entraram, sairam;
+    inteiro: cont, pessoasNoElevador;
+    logico: excedeu;
+    
+    excedeu <- falso;
+    
+    leia(qtdLeituras, capacidadeMax);
+    
+    //Validando a condição que diz (1<= N <= 1000)
+    se qtdLeituras >= 1 e qtdLeituras <= 1000 entao
+        inicio
+            //Validando a condição que diz ( 1 <= C <= 1000)
+            se capacidadeMax >= 1 e capacidadeMax <= 1000 entao
+                inicio
+                    enquanto cont < qtdLeituras faca 
+                        leia(sairam, entraram);
+                        se cont = 0 entao
+                            pessoasNoElevador <- entraram;
+                        senao
+                            inicio
+                                pessoasNoElevador <- (pessoasNoElevador - sairam) + entraram;
+                            
+                                se pessoasNoElevador > capacidadeMax entao
+                                    excedeu <- verdadeiro;
+                                fimse;
+                            fim;
+                        fimse;
+                        
+                        cont <- cont + 1;
+                    fimenquanto;
+                fim;
+            fimse;
+        fim;
+    fimse;
+    
+    se excedeu entao
+        escreva("S");
+    senao
+        escreva("N");
+    fimse;
+fim.

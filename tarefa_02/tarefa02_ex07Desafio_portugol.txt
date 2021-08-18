@@ -1,0 +1,535 @@
+/*
+
+Desafio 02 tarefa02: Adivinhando qual é o animal.
+
+*/
+
+
+
+inicio
+
+    inteiro: resposta; // input
+
+    caracter: pergunta; // output
+
+    
+
+    pergunta <- "mamifero?";
+
+    escreva(pergunta);
+
+    leia(resposta);
+
+    
+
+    //Caso dos mamíferos
+
+    se resposta = 1 entao
+
+    
+
+    //Então é mamífero!!!
+
+        inicio
+
+            
+
+            pergunta <- "quadrupede?";
+
+            escreva(pergunta);
+
+            leia(resposta);
+
+            
+
+            //mamiferos quadrupedes
+
+            se resposta = 1 entao
+
+                inicio
+
+                    
+
+                    pergunta <- "carnivoro?";
+
+                    escreva(pergunta);
+
+                    leia(resposta);
+
+                    
+
+                    //leao
+
+                    se resposta = 1 entao 
+
+                        escreva("leao");
+
+                        
+
+                        senao 
+
+                            inicio
+
+                                pergunta <- "herbivoro?";
+
+                                escreva(pergunta);
+
+                                leia(resposta);
+
+                               
+
+                               //cavalo
+
+                                se resposta = 1 entao
+
+                                    inicio
+
+                                        escreva("cavalo");
+
+                                    fim;
+
+                                    
+
+                                    senao 
+
+                                        escreva("nao sei");
+
+                                fimse;
+
+                            fim;
+
+                    fimse;
+
+                fim;
+
+                senao
+
+                
+
+                //mamíferos bípedes
+
+                    inicio
+
+                        pergunta <- "bipede?";
+
+                        escreva(pergunta);
+
+                        leia(resposta);
+
+                       
+
+                        se resposta = 1 entao
+
+                            inicio
+
+                                //É bípede!!!
+
+                                
+
+                                pergunta <- "onivoro?";
+
+                                escreva(pergunta);
+
+                                leia(resposta);
+
+                                
+
+                                //homem
+
+                                se resposta = 1 entao
+
+                                    inicio
+
+                                         escreva("homem");
+
+                                    fim;
+
+                                    
+
+                                    senao
+
+                                        inicio
+
+                                            pergunta <- "frutifero?";
+
+                                            escreva(pergunta);
+
+                                            leia(resposta);
+
+                                            
+
+                                            //macaco
+
+                                            se resposta = 1 entao
+
+                                                inicio
+
+                                                    escreva("macaco");
+
+                                                fim;
+
+                                                
+
+                                                senao
+
+                                                    escreva("nao sei");
+
+                                            fimse;
+
+                                        fim;
+
+                                fimse;
+
+                            fim;
+
+                            senao
+
+                            //mamiferos voadores
+
+                                inicio
+
+                                    pergunta <- "voador?";
+
+                                    escreva(pergunta);
+
+                                    leia(resposta);
+
+                                    
+
+                                    //morcego
+
+                                    se resposta = 1 entao
+
+                                        inicio
+
+                                            escreva("morcego");
+
+                                        fim;
+
+                                        senao 
+
+                                        //mamiferos aquaticos
+
+                                            inicio
+
+                                                pergunta <- "aquatico?";
+
+                                                escreva(pergunta);
+
+                                                leia(resposta);
+
+                                                
+
+                                                //baleia
+
+                                                se resposta = 1 entao 
+
+                                                    inicio
+
+                                                        escreva("baleia");
+
+                                                    fim;
+
+                                                    senao 
+
+                                                        escreva("nao sei");
+
+                                                fimse;
+
+                                                
+
+                                            fim;
+
+                                    fimse;
+
+                                fim;
+
+                        fimse;
+
+                    fim;
+
+            fimse;
+
+        fim;
+
+        
+
+        senao
+
+         //Caso das Aves
+
+            inicio
+
+                pergunta <- "ave?";
+
+                escreva(pergunta);
+
+                leia(resposta);
+
+                se resposta = 1 entao 
+
+                    inicio
+
+                        //É avee!!!
+
+                        
+
+                        pergunta <- "nao-voador?";
+
+                        escreva(pergunta);
+
+                        leia(resposta);
+
+                        
+
+                        //Verificando se é voador
+
+                        se resposta = 1 entao
+
+                            inicio 
+
+                                pergunta <- "tropical?";
+
+                                escreva(pergunta);
+
+                                leia(resposta);
+
+                                
+
+                                //avestruz
+
+                                se resposta = 1 entao
+
+                                    inicio
+
+                                        escreva("avestruz");
+
+                                    fim;
+
+                                    senao 
+
+                                        inicio
+
+                                            pergunta <- "polar?";
+
+                                            escreva(pergunta);
+
+                                            leia(resposta);
+
+                                            
+
+                                            //pinguim
+
+                                            se resposta = 1 entao
+
+                                                inicio
+
+                                                    escreva("pinguim");
+
+                                                fim;
+
+                                                senao 
+
+                                                    escreva("nao sei");
+
+                                            fimse;
+
+                                            
+
+                                        fim;
+
+                                fimse;
+
+                            fim;
+
+                            
+
+                            senao
+
+                            //nadador
+
+                                inicio
+
+                                    pergunta <- "nadador?";
+
+                                    escreva(pergunta);
+
+                                    leia(resposta);
+
+                                    
+
+                                    //pato
+
+                                    se resposta = 1 entao
+
+                                        inicio
+
+                                            escreva("pato");
+
+                                        fim;
+
+                                        
+
+                                        senao
+
+                                        //rapina
+
+                                            inicio
+
+                                                pergunta <- "rapina?";
+
+                                                escreva(pergunta);
+
+                                                leia(resposta);
+
+                                                
+
+                                                //aguia
+
+                                                se resposta = 1 entao
+
+                                                    inicio
+
+                                                        escreva("aguia");
+
+                                                    fim;
+
+                                                    senao 
+
+                                                        escreva("nao sei");
+
+                                                fimse;
+
+                                            fim;
+
+                                    fimse;
+
+                                fim;
+
+                        fimse;
+
+                    fim;
+
+                    
+
+                    senao
+
+                    //Caso dos répteis
+
+                        inicio
+
+                            pergunta <- "reptil?";
+
+                            escreva(pergunta);
+
+                            leia(resposta);
+
+                            se resposta = 1 entao 
+
+                                inicio
+
+                                    //É reptilll!!!
+
+                                   
+
+                                    pergunta <- "com-casco?";
+
+                                    escreva(pergunta);
+
+                                    leia(resposta);
+
+                                    
+
+                                    //tartaruga
+
+                                    se resposta = 1 entao
+
+                                        inicio
+
+                                            escreva("tartaruga");
+
+                                        fim;
+
+                                        //carnivoro-reptil
+
+                                        senao
+
+                                            inicio
+
+                                                pergunta <- "carnivoro?";
+
+                                                escreva(pergunta);
+
+                                                leia(resposta);
+
+                                                
+
+                                                //crocodilo
+
+                                                se resposta = 1 entao 
+
+                                                    inicio
+
+                                                        escreva("crocodilo");
+
+                                                    fim;
+
+                                                    //sem-patas
+
+                                                    senao 
+
+                                                        inicio
+
+                                                            pergunta <- "sem-patas?";
+
+                                                            escreva(pergunta);
+
+                                                            leia(resposta);
+
+                                                            
+
+                                                            //cobra
+
+                                                            se resposta = 1 entao
+
+                                                                inicio
+
+                                                                    escreva("cobra");
+
+                                                                fim;
+
+                                                                senao
+
+                                                                    escreva("nao sei");
+
+                                                            fimse;
+
+                                                        fim;
+
+                                                fimse;
+
+                                            fim;
+
+                                    fimse;
+
+                                fim;
+
+                                senao
+
+                                //caso não seja nem reptil, ave ou mamifero
+
+                                    escreva("nao sei");
+
+                            fimse;
+
+                        fim;
+
+                    
+
+                fimse;
+
+            fim;
+
+    fimse;
+
+fim.

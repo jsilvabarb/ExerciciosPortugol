@@ -1,0 +1,51 @@
+/*
+ Escreva um programa que leia três números inteiros
+ referentes ao segmento de reta e determine se o triangulo
+ é isóceles, equilátero, escaleno ou inválido.
+*/
+inicio
+    inteiro: a, b, c;
+    
+    leia(a, b, c);
+    
+    //Verificando se o triangulo é inválido, isoceles, equilátero ou escaleno.
+    
+    se (a > 0) e (b > 0) e (c > 0) entao
+        inicio
+            //Condições para o triangulo ser valido
+            se (a < ( b + c )) entao
+                se (b < ( a + c )) entao
+                    se (c < ( a + b )) entao
+                        inicio
+                            
+                            //Verificando se é isoceles, ou seja, dois lados iguais
+                            se (a = b) ou (a = c) ou (b = c) entao
+                                inicio
+                                //Verificando se é equilatero, ou seja, todos os lados iguais
+                                    se (a = b) e (b = c) entao 
+                                        escreva("equilatero");
+                                        senao 
+                                        escreva("isoceles");
+                                    fimse;
+                                fim;
+                                senao
+                                //Caso as condições não sejam atendidas, conclui-se que o triangulo é escaleno, todos os lados diferentes
+                                    escreva("escaleno");
+                            fimse;
+                        fim;
+                        
+                        // Caso nenhuma condição seja verdade entao triangulo invalido
+                        senao 
+                            escreva("invalido");
+                    fimse;
+                    senao 
+                        escreva("invalido");
+                fimse;
+                senao 
+                    escreva("invalido");
+            fimse;
+        fim;
+        senao 
+            escreva("invalido");
+    fimse;
+fim.

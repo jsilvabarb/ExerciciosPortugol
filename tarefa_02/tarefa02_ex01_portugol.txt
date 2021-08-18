@@ -1,0 +1,22 @@
+/*
+  Escreva um programa que leia dois números inteiros e efetue a soma deles.
+  Caso a soma seja maior que 20 acrescentar 8 a soma, caso contrário
+  subtrair 5 da soma.
+*/
+inicio
+    inteiro: n1, n2, soma;
+    
+    leia(n1, n2);
+    
+    soma <- n1 + n2;
+    
+    se soma > 20 entao
+        inicio
+            soma <- soma + 8;
+        fim;
+    senao
+        soma <- soma - 5;
+    fimse;
+    
+    escreva(soma);
+fim.
